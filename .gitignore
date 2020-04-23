@@ -1,0 +1,12 @@
+dist/
+deploy_versions/
+.temp/
+.rn_temp/
+node_modules/
+.DS_Store
+将删除 .idea/.gitignore
+将删除 .idea/inspectionProfiles/
+将删除 .idea/misc.xml
+将删除 .idea/modules.xml
+将删除 .idea/my-guitar-sheet.iml
+将删除 .idea/vcs.xml
