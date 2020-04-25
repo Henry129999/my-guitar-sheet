@@ -1,48 +1,53 @@
 import Taro, { Component } from '@tarojs/taro'
 import { Provider } from '@tarojs/redux'
-
-import Index from './pages/index'
-
+import Shelf from './pages/shelf/index'
+import Community from './pages/community/index.css'
+import User from './pages/User/index'
 import configStore from './store'
-
 import './app.scss'
 
-// 如果需要在 h5 环境中开启 React Devtools
-// 取消以下注释：
-// if (process.env.NODE_ENV !== 'production' && process.env.TARO_ENV === 'h5')  {
-//   require('nerv-devtools')
-// }
-
-const store = configStore()
+const store = configStore();
 
 class App extends Component {
 
   config = {
     pages: [
-      'pages/index/index'
+      'pages/shelf/index',
+      'pages/community/index',
+      'pages/user/index'
     ],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
       navigationBarTitleText: 'WeChat',
-      navigationBarTextStyle: 'black'
+      navigationBarTextStyle: 'black',
+    },
+    tabBar: {
+      list: [{
+        pagePath: "pages/shelf/index",
+        text: "谱库",
+        iconPath: "./images/music.png",
+        selectedIconPath: "./images/music.png",
+      }, {
+        pagePath: "pages/community/index",
+        text: "云社区",
+        iconPath: "./images/cloud-link.png",
+        selectedIconPath: "./images/cloud-link.png",
+      }, {
+        pagePath: "pages/user/index",
+        text: "我的",
+        iconPath: "./images/user.png",
+        selectedIconPath: "./images/user.png",
+      }],
     }
-  }
+  };
 
-  componentDidMount () {}
-
-  componentDidShow () {}
-
-  componentDidHide () {}
-
-  componentDidCatchError () {}
-
-  // 在 App 类中的 render() 函数没有实际作用
-  // 请勿修改此函数
   render () {
     return (
       <Provider store={store}>
-        <Index />
+        <Shelf />
+        <Community />
+        <User />
       </Provider>
     )
   }

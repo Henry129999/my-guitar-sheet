@@ -1,0 +1,39 @@
+.sheet-card {
+  display: flex;
+  flex-wrap: nowrap;
+  border: 1px solid #f3f3f3;
+  margin: 16px 0 16px 24px;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0 0 6px 1px #c3bec1;
+}
+
+.sheet-card-image {
+  width: 120px;
+  height: 160px;
+}
+
+.sheet-card-detail {
+  display: flex;
+  flex-direction: column;
+  margin-left: 16px;
+}
+
+.s-c-d-title {
+  color: #494447;
+}
+
+.s-c-d-summary {
+  color: #949093;
+  font-size: 26px;
+  flex: 1;
+}
+
+.s-c-d-other {
+  color: #949093;
+  font-size: 26px;
+}
+
+.s-c-d-o-number {
+  margin-right: 32px;
+}

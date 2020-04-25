@@ -1,0 +1,11 @@
+.sheet-list {
+  display: flex;
+  flex-direction: column;
+  width: 75vw;
+  overflow: scroll;
+  height: 100%;
+}
+
+.sheet-list-sub {
+  padding-right: 16px;
+}

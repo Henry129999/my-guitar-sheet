@@ -1,0 +1,25 @@
+@import "~taro-ui/dist/style/components/fab.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100vw;
+}
+
+.float-btn {
+  position: absolute;
+  bottom: 48px;
+  right: 32px;
+}
+
+.add-btn {
+  width: 98px;
+  height: 98px;
+}

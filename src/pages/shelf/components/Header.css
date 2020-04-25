@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100vw;
+  height: 12.3vw;
+}
+
+.search {
+  display: flex;
+  flex-wrap: nowrap;
+  flex: 1;
+}
+
+
+
