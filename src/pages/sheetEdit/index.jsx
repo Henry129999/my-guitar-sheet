@@ -73,7 +73,7 @@ function SheetEdit() {
   return (
     <View className='sheet-edit'>
       <View className='header'>
-        <View>曲薄：</View>
+        <View className='summary-title'>所在簿名：</View>
         <View className='select'>
           {nameList.map((item, index) => (
             <View
@@ -95,6 +95,7 @@ function SheetEdit() {
         <AtInput
           name='value'
           title='歌曲名：'
+          required
           type='text'
           placeholder='请输入'
           border={false}
@@ -102,7 +103,7 @@ function SheetEdit() {
           onChange={onChangeName}
         />
         <View className='summary'>
-          <Text>简介：</Text>
+          <Text className='summary-title'>简介：</Text>
           <View style={{flex: '1'}}>
             <AtTextarea
               value={this.state.value}
@@ -113,7 +114,7 @@ function SheetEdit() {
           </View>
         </View>
         <View className='summary'>
-          <Text>图片：</Text>
+          <Text className='summary-title'>图片：</Text>
           <View style={{flex: '1'}} className='image-box'>
             <AtImagePicker
               files={imageFiles}
@@ -127,7 +128,15 @@ function SheetEdit() {
           onClick={onCancelEdit}
           className='btn-style'
         >取消</Button>
-        <Button onClick={onConfirmEdit}>确定</Button>
+        <Button
+          onClick={onConfirmEdit}
+          className='btn-style'
+          style={{
+            backgroundColor: '#6190E8',
+            color: '#FFF'
+          }}
+          size='small'
+        >确定</Button>
       </View>
     </View>
   )
