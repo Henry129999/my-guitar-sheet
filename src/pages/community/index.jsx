@@ -4,7 +4,7 @@ import './index.css';
 
 function Community() {
   return(
-    <View>
+    <View className='community'>
       <Text>暂未开放，敬请期待！～</Text>
     </View>
   )

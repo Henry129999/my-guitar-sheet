@@ -7,7 +7,7 @@ import { View, Button } from "@tarojs/components";
 
 
 function AddFileModal(props) {
-  const { isShow } = props;
+  const { isShow, text } = props;
   const [inputValue, setInputValue] = useState('');
   const [tipInfo, setTipInfo] = useState({
     isShow: false,
@@ -43,7 +43,7 @@ function AddFileModal(props) {
   return(
     <View>
       <AtModal isOpened={isShow}>
-        <AtModalHeader>添加簿</AtModalHeader>
+        <AtModalHeader>{text ? '修改' : '添加'}簿</AtModalHeader>
         <AtModalContent>
           <AtInput
             name='value'
@@ -52,7 +52,7 @@ function AddFileModal(props) {
             required
             border={false}
             placeholder='请输入'
-            value={inputValue}
+            value={inputValue || text}
             onChange={onChangeInputValue}
           />
         </AtModalContent>

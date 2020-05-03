@@ -5,6 +5,7 @@ import Community from './pages/community/index';
 import User from './pages/User/index';
 import configStore from './store';
 import Management from './pages/management/index';
+import FileOperate from './pages/fileOperate/index';
 import SheetEdit from './pages/sheetEdit';
 import './app.scss';
 
@@ -16,6 +17,7 @@ class App extends Component {
     pages: [
       'pages/shelf/index',
       'pages/management/index',
+      'pages/fileOperate/index',
       'pages/community/index',
       'pages/user/index',
       'pages/sheetEdit/index'
@@ -57,6 +59,7 @@ class App extends Component {
       <Provider store={store}>
         <Shelf />
         <Management />
+        <FileOperate />
         <Community />
         <User />
         <SheetEdit />
