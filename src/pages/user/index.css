@@ -1,0 +1,39 @@
+.user {
+  display: flex;
+  flex-direction: column;
+  background-color: #efeff4;
+  height: 100vh;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3vw;
+  background-color: #FFF;
+}
+
+.list-item {
+  padding: 3vw 5vw;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.list-item-image {
+  width: 5vw;
+  height: 5vw;
+}
+
+.list-item-title {
+  margin-left: 4vw;
+  flex: 1;
+}
+
+.version {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 3vw;
+  color: #949093;
+  margin-bottom: 2vw;
+}

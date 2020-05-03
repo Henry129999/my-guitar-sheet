@@ -1,0 +1,66 @@
+.sheet-edit {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.header {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 3vw 3vw 1vw;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.select {
+  display: flex;
+  flex: 1;
+  flex-wrap: nowrap;
+  overflow: scroll;
+  width: 100vw;
+}
+
+.select-item {
+  white-space: nowrap;
+  display: inline-block;
+  min-width: 20vw;
+  height: 6vw;
+  margin-right: 1vw;
+  border: 1px solid #585858;
+  border-radius: 3vw;
+  text-align: center;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.summary {
+  margin: 0 4.3vw 3vw;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.at-input__title {
+  width: unset;
+  margin-right: unset;
+}
+
+.image-box {
+  border: 1px #d6e4ef solid;
+  border-radius: 1.1vw;
+  min-height: 41vw;
+}
+
+.bottom-btn {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.btn-style {
+  width: 20vw;
+}

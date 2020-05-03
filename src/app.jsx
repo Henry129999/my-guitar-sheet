@@ -1,10 +1,12 @@
-import Taro, { Component } from '@tarojs/taro'
-import { Provider } from '@tarojs/redux'
-import Shelf from './pages/shelf/index'
-import Community from './pages/community/index.css'
-import User from './pages/User/index'
-import configStore from './store'
-import './app.scss'
+import Taro, { Component } from '@tarojs/taro';
+import { Provider } from '@tarojs/redux';
+import Shelf from './pages/shelf/index';
+import Community from './pages/community/index';
+import User from './pages/User/index';
+import configStore from './store';
+import Management from './pages/management/index';
+import SheetEdit from './pages/sheetEdit';
+import './app.scss';
 
 const store = configStore();
 
@@ -13,8 +15,10 @@ class App extends Component {
   config = {
     pages: [
       'pages/shelf/index',
+      'pages/management/index',
       'pages/community/index',
-      'pages/user/index'
+      'pages/user/index',
+      'pages/sheetEdit/index'
     ],
     window: {
       backgroundTextStyle: 'light',
@@ -28,6 +32,12 @@ class App extends Component {
         text: "谱库",
         iconPath: "./images/music.png",
         selectedIconPath: "./images/music.png",
+      },{
+        pagePath: "pages/management/index",
+        text: "管理",
+        iconPath: "./images/manage.png",
+        selectedIconPath: "./images/manage.png",
+
       }, {
         pagePath: "pages/community/index",
         text: "云社区",
@@ -46,8 +56,10 @@ class App extends Component {
     return (
       <Provider store={store}>
         <Shelf />
+        <Management />
         <Community />
         <User />
+        <SheetEdit />
       </Provider>
     )
   }

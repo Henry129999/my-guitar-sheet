@@ -1,0 +1,46 @@
+.float-btn {
+  position: absolute;
+  bottom: 48px;
+  right: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.setting {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.blank {
+  flex: 1;
+}
+
+.setting-btn {
+  width: 98px;
+  height: 98px;
+}
+
+.edit {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.button-List {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e6e6e6;
+  margin-bottom: 2.13vw;
+  background-color: #FFF;
+  padding: 1.1vw;
+  width: 26vw;
+  border-radius: 2.13vw;
+  align-items: center;
+}
+
+.button-item {
+  width: 80%;
+  font-size: 5vw;
+  text-align: center;
+  padding: 1.1vw;
+  color: #6a96e9;
+}

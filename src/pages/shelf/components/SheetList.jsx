@@ -1,4 +1,5 @@
 import Taro, { useState } from '@tarojs/taro';
+import { useSelector } from "@tarojs/redux";
 import { View } from "@tarojs/components";
 import SheetCard from './SheetCard';
 import './SheetList.css';
@@ -48,11 +49,18 @@ const sheetList = [{
 }];
 
 function SheetList() {
+  const sheetListData = useSelector(state => state.sheetListData);
+  const { editType, editStatus } = sheetListData;
+
   return(
     <View className='sheet-list'>
       <View className='sheet-list-sub'>
         {sheetList.map((item, index) => (
-          <SheetCard key={index} {...item} />
+          <SheetCard
+            key={index}
+            {...item}
+            index={index}
+          />
         ))}
       </View>
     </View>

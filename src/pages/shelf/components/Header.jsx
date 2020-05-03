@@ -1,12 +1,12 @@
 import Taro, { useState } from '@tarojs/taro'
 import { View, Text } from "@tarojs/components";
-import { AtButton, AtIcon, AtInput } from 'taro-ui';
+import { AtSearchBar } from 'taro-ui';
 import './Header.css';
 
 function Header() {
   const [searchVal, setSearchVal] = useState('');
 
-  const handleInputChange = (value) => {
+  const onInputChange = (value) => {
     setSearchVal(value);
   };
 
@@ -15,28 +15,16 @@ function Header() {
   };
 
   return (
-    <View className='header'>
-      <AtButton type='primary'>
-        <AtIcon value='add' size='12' />
-        <Text>添加簿</Text>
-      </AtButton>
-      <View className='search'>
-        <AtInput
-          name='value'
-          title=''
-          type='text'
-          placeholder='请输入谱名'
-          value={searchVal}
-          onChange={handleInputChange}
-        />
-        <AtButton
-          type='primary'
-          onClick={onSearch}
-        >
-          <AtIcon value='search' size='12' />
-          <Text>搜索</Text>
-        </AtButton>
-      </View>
+    <View className='search'>
+      <AtSearchBar
+        placeholder='请输入歌曲名'
+        value={searchVal}
+        onChange={onInputChange}
+        customStyle={{
+          width: '100vw',
+          fontSize: '20vw'
+        }}
+      />
     </View>
   )
 }

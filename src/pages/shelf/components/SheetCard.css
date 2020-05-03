@@ -6,6 +6,7 @@
   padding: 8px;
   border-radius: 8px;
   box-shadow: 0 0 6px 1px #c3bec1;
+  position: relative;
 }
 
 .sheet-card-image {

@@ -1,0 +1,25 @@
+.avatar {
+  display: flex;
+  align-items: center;
+  background-color: #FFF;
+  margin: 3vw 0;
+  padding: 3vw 3vw 3vw 5vw;
+}
+
+.image-box {
+  border-radius: 10vw;
+  width: 20vw;
+  height: 20vw;
+  overflow: hidden;
+}
+
+.avatar-image {
+  width: 20vw;
+  height: 20vw;
+  border-radius: 4vw;
+}
+
+.avatar-name {
+  font-size: 5vw;
+  margin-left: 4vw;
+}
