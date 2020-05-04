@@ -3,9 +3,11 @@ import { View, Image, Text } from "@tarojs/components";
 import './SheetCard.css';
 
 function SheetCard(props) {
-  const { imageUrl, title, summary, number, date } = props;
+  const {
+    imageUrl, title, summary, number, date, onSheetCardClick
+  } = props;
   return(
-    <View className='sheet-card'>
+    <View className='sheet-card' onClick={onSheetCardClick}>
       <Image
         className='sheet-card-image'
         src='../../../images/sheet.jpg'

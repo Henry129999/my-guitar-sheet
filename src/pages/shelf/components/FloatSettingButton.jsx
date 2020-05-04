@@ -1,7 +1,7 @@
 import Taro, { useState } from '@tarojs/taro'
 import { useSelector, useDispatch} from "@tarojs/redux";
 import { View, Text } from "@tarojs/components";
-import {AtFab, AtIcon, AtButton} from "taro-ui";
+import { AtFab, AtIcon } from "taro-ui";
 import './FloatSettingButton.css';
 
 const buttonConfigList = [{

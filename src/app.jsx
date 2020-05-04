@@ -7,6 +7,7 @@ import configStore from './store';
 import Management from './pages/management/index';
 import FileOperate from './pages/fileOperate/index';
 import SheetEdit from './pages/sheetEdit';
+import SheetView from './pages/sheetView';
 import './app.scss';
 
 const store = configStore();
@@ -20,7 +21,8 @@ class App extends Component {
       'pages/fileOperate/index',
       'pages/community/index',
       'pages/user/index',
-      'pages/sheetEdit/index'
+      'pages/sheetEdit/index',
+      'pages/sheetView/index',
     ],
     window: {
       backgroundTextStyle: 'light',
@@ -63,6 +65,7 @@ class App extends Component {
         <Community />
         <User />
         <SheetEdit />
+        <SheetView />
       </Provider>
     )
   }

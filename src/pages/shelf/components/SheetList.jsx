@@ -48,9 +48,16 @@ const sheetList = [{
   number: '5'
 }];
 
-function SheetList() {
+function SheetList(props) {
   const sheetListData = useSelector(state => state.sheetListData);
   const { editType, editStatus } = sheetListData;
+
+  const onSheetCardClick = (item) => {
+    console.log('item', item);
+    Taro.navigateTo({
+      url: `/pages/sheetView/index?name=${item.title}`
+    })
+  };
 
   return(
     <View className='sheet-list'>
@@ -60,6 +67,7 @@ function SheetList() {
             key={index}
             {...item}
             index={index}
+            onSheetCardClick={() => onSheetCardClick(item)}
           />
         ))}
       </View>
